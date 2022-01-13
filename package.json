@@ -1,0 +1,37 @@
+{
+    "name": "learnfunctions",
+    "version": "1.0.0",
+    "description": "1. Array",
+    "main": "webpack.config.js",
+    "scripts": {
+        "start": "webpack serve --config ./webpack.config.js --mode development",
+        "test": "jest",
+        "lint": "eslint --ext .js src --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheCrazyAvenger/learnFunctions.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/TheCrazyAvenger/learnFunctions/issues"
+    },
+    "homepage": "https://github.com/TheCrazyAvenger/learnFunctions#readme",
+    "devDependencies": {
+        "@babel/core": "^7.14.5",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.14.5",
+        "babel-loader": "^8.2.2",
+        "eslint": "^7.28.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "jest": "^27.4.7",
+        "prettier": "^2.3.1",
+        "webpack": "^5.3.2",
+        "webpack-cli": "^4.1.0",
+        "webpack-dev-server": "^3.11.0"
+    }
+}
