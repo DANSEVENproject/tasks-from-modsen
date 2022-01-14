@@ -1,4 +1,4 @@
-const maxTripletSum = (arg, arr, count = 3) => {
+export const maxTripletSum = (arg, arr, count = 3) => {
     arr = new Set();
     arg.forEach((item) => arr.add(item));
     arg = [];
@@ -9,4 +9,3 @@ const maxTripletSum = (arg, arr, count = 3) => {
     }
     return arg.reduce((acc, item) => acc + item);
 };
-export default maxTripletSum;

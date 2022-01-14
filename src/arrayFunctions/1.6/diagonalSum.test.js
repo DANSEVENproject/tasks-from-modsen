@@ -1,4 +1,4 @@
-import diagonalSum from './diagonalSum';
+import { diagonalSum } from './diagonalSum';
 test('returns diagonal multiplication of numbers', () => {
     expect(
         diagonalSum([

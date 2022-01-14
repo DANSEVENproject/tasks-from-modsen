@@ -1,4 +1,4 @@
-const romanToNumber = (number, arr, pos = 0, acc = 0) => {
+export const romanToNumber = (number, arr, pos = 0, acc = 0) => {
     arr = [
         { value: 1000, num: 'M' },
         { value: 900, num: 'CM' },
@@ -21,4 +21,3 @@ const romanToNumber = (number, arr, pos = 0, acc = 0) => {
     }
     return acc;
 };
-export default romanToNumber;

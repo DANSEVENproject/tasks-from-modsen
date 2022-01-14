@@ -1,4 +1,4 @@
-const countDuplicates = (text, count = 0) => {
+export const countDuplicates = (text, count = 0) => {
     text = text.toLowerCase();
     let arr = new Set();
     for (let i = 0; i < text.length; i++) arr.add(text[i]);
@@ -13,4 +13,3 @@ const countDuplicates = (text, count = 0) => {
     });
     return count;
 };
-export default countDuplicates;

@@ -1,2 +1,1 @@
-const multiplyAll = (arr) => (count) => arr.map((item) => item * count);
-export default multiplyAll;
+export const multiplyAll = (arr) => (count) => arr.map((item) => item * count);

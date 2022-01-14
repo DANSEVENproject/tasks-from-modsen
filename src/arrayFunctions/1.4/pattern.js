@@ -1,4 +1,4 @@
-const pattern = (num, arr = [], temp = [], k = num) => {
+export const pattern = (num, arr = [], temp = [], k = num) => {
     for (let i = 0; i < num; i++, k--) {
         for (let j = 1; j < num + 1; j++) {
             temp.push(j);
@@ -9,4 +9,3 @@ const pattern = (num, arr = [], temp = [], k = num) => {
     }
     return arr;
 };
-export default pattern;

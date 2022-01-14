@@ -1,4 +1,4 @@
-const formatCurrency = (amount) => {
+export const formatCurrency = (amount) => {
     amount = Math.floor(amount * 100) / 100;
     amount = String(amount);
     for (let i = amount.length - 1; i != -1; i--) {
@@ -13,4 +13,3 @@ const formatCurrency = (amount) => {
     }
     return amount;
 };
-export default formatCurrency;

@@ -1,4 +1,4 @@
-import flattenAndSort from './flattenAndSort';
+import { flattenAndSort } from './flattenAndSort';
 test('returned sort array', () => {
     expect(flattenAndSort([
         [3, 2, 1],

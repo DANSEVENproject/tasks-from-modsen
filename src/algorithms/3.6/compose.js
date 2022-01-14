@@ -1,2 +1,1 @@
-const compose = () => {};
-console.log(compose());
+export const compose = (fn1, fn2, fn) => (...args) => fn2(fn(fn1(...args)));

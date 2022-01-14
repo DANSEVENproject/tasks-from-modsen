@@ -1,4 +1,4 @@
-import sumAverage from './sumAverage';
+import { sumAverage } from './sumAverage';
 test('returned acc arithmetic mean', () => {
     expect(
         sumAverage([
