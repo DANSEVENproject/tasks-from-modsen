@@ -1,10 +1,8 @@
-export const countDuplicates = (text, count = 0) => {
-    text = text.toLowerCase();
-    let arr = new Set();
-    for (let i = 0; i < text.length; i++) arr.add(text[i]);
-    arr.forEach((item) => {
-        for (let j = 0, cor = 0; j < text.length; j++) {
-            if (item === text[j]) cor++;
+export const countDuplicates = (text) => {
+    let count = 0;
+    [...new Set(text.toLowerCase())].forEach(item => {
+        for (let i = 0, cor = 0; i < text.length; i++) {
+            if (item === text.toLowerCase().split('')[i]) cor++;
             if (cor >= 2) {
                 count++;
                 break;
@@ -12,4 +10,4 @@ export const countDuplicates = (text, count = 0) => {
         }
     });
     return count;
-};
+}

@@ -1,15 +1,13 @@
 export const formatCurrency = (amount) => {
-    amount = Math.floor(amount * 100) / 100;
-    amount = String(amount);
-    for (let i = amount.length - 1; i != -1; i--) {
+    let result = String(Math.floor(amount * 100) / 100);
+    for (let i = result.length - 1; i != -1; i--) {
         if (
-            /\d/.test(+amount[i]) &&
-            /\d/.test(+amount[i - 1]) &&
-            /\d/.test(+amount[i - 2]) &&
-            /\d/.test(+amount[i - 3])
+            /\d/.test(+result[i]) &&
+            /\d/.test(+result[i - 1]) &&
+            /\d/.test(+result[i - 2]) &&
+            /\d/.test(+result[i - 3])
         )
-            amount =
-            amount.substr(0, i - 2) + ',' + amount.substr(i - 2, amount.length);
+            result = result.substr(0, i - 2) + ',' + result.substr(i - 2, result.length);
     }
-    return amount;
-};
+    return result;
+}

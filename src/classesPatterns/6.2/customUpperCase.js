@@ -1,12 +1,12 @@
 export class Strings {
     customUpperCase(str) {
-        for (let i = 0; i < str.length; i++) {
-            if (/[a-zа-я]/.test(str[i])) {
-                str = str.substr(0, i) +
-                    String.fromCharCode(str[i].charCodeAt() - 32) +
-                    str.substr(i + 1, str.length);
+        let string = '';
+        str.split('').forEach(item => {
+            if (/[a-zа-я]/.test(item)) {
+                item = String.fromCharCode(item.charCodeAt() - 32);
             }
-        }
-        return str;
+            string += item;
+        });
+        return string;
     }
-}
+};

@@ -1,6 +1,7 @@
-export const diagonalSum = (arg, acc = 0) => {
-    arg.forEach((item, i) =>
-        item.forEach((item, j) => (i === j ? (acc += item) : (acc = acc)))
-    );
+export const diagonalSum = (arr) => {
+    let acc = 0;
+    arr.filter(item => item.length !== 0).forEach((item, i) =>
+        item.forEach((items, j) => (i === j) ? acc += +items : acc = acc)
+    )
     return acc;
-};
+}

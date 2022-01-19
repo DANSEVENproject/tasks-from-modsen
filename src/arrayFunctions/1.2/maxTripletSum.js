@@ -1,11 +1,5 @@
-export const maxTripletSum = (arg, arr, count = 3) => {
-    arr = new Set();
-    arg.forEach((item) => arr.add(item));
-    arg = [];
-    while (count !== 0) {
-        arg.push(Math.max(...arr));
-        arr.delete(Math.max(...arr));
-        count--;
-    }
-    return arg.reduce((acc, item) => acc + item);
-};
+export const maxTripletSum = (arr) => [...new Set(arr)].
+flat().
+sort((a, b) => b - a).
+filter((item, i) => i < 3).
+reduce((acc, item) => +acc + +item);

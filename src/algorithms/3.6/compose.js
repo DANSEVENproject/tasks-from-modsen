@@ -1,1 +1,1 @@
-export const compose = (fn1, fn2, fn) => (...args) => fn2(fn(fn1(...args)));
+export const compose = (...fn) => args => fn.reduceRight((acc, fn) => fn(acc), args);

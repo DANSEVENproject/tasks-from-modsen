@@ -1,10 +1,11 @@
 export const toMachineName = (name, separator) => {
-    name = name.toLowerCase().trim();
-    for (let i = 0; i < name.length; i++) {
-        if (name[i] === ' ' && name[i + 1] !== ' ') {
-            name = name.substr(0, i) + separator + name.substr(i + 1, name.length);
+    let str = '';
+    [...name.toLowerCase().trim()].forEach((item, i) => {
+        if (item === ' ' && /[A-zА-я0-9]/.test([...name.toLowerCase().trim()][i + 1])) {
+            str += separator;
+        } else {
+            str += item;
         }
-    }
-    name = name.replace(/ /g, '');
-    return name;
-};
+    });
+    return str.replace(new RegExp(`[^A-zА-я0-9${separator}]`, 'g'), '');
+}

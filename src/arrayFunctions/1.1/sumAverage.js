@@ -1,6 +1,1 @@
-export const sumAverage = (arr, acc = 0) => {
-    arr.forEach(
-        (item) => (acc += item.reduce((accum, elem) => accum + elem) / item.length)
-    );
-    return Math.floor(acc);
-};
+export const sumAverage = (arr) => arr.filter(item => item.length !== 0).reduce((acc, item) => +acc + Math.floor(item.reduce((accum, elem) => +accum + +elem) / item.length), 0);

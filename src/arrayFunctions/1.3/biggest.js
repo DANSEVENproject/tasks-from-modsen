@@ -1,1 +1,1 @@
-export const biggest = (nums) => nums.sort((a, b) => '' + b + a - ('' + a + b)).join('');
+export const biggest = (nums) => nums.sort((a, b) => String(b) + a - (String(a) + b)).join('');

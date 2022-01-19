@@ -7,4 +7,18 @@ test('returns diagonal multiplication of numbers', () => {
             [6, 9, 5],
         ])
     ).toBe(9);
+    expect(
+        diagonalSum([
+            [],
+            [6, 3, 5],
+            [7, -1, '5'],
+            [5, 5, 5]
+        ])
+    ).toBe(10);
+    expect(
+        diagonalSum([
+            [],
+            [],
+        ])
+    ).toBe(0);
 });
